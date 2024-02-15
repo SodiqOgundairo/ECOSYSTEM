@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/img/logo.png';
+
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <p className='text-red-950 font-extrabold'> TAILWIND IS LIVE</p>
     </div>
   );
 }
