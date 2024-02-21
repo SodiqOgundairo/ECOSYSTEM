@@ -6,13 +6,14 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-            theme: '#6554af',
-            accent: '#9507de'
+            theme: '#0092df',
+            accent: '#113245',
+            dark: '#101010',
+            light: '#fafafa'
         },
-        // backgroundImage: {
-        //   'heroImg': "url('assets/img/bg2_cl.png')",
-        //   'footer-texture': "url('/img/footer-texture.png')",
-        // }
+        backgroundImage: {
+          'heroImg': "url('../img/hero-bg.png')",
+        }
       },
     },
     plugins: [],
