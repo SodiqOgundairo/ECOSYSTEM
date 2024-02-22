@@ -7,12 +7,12 @@ module.exports = {
       extend: {
         colors: {
             theme: '#0092df',
-            accent: '#113245',
+            accent: '#044485',
             dark: '#101010',
             light: '#fafafa'
         },
         backgroundImage: {
-          'heroImg': "url('../img/hero-bg.png')",
+          'heroImg': "url('../img/hero-bg.jpg')",
         }
       },
     },
