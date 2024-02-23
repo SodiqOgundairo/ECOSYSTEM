@@ -147,8 +147,9 @@ const Main = () => {
       {/* END OF WHY US  */}
 
       {/* OUR SERVICES */}
-      <section className="our-services text-center py-[100px] text-light bg-gradient-to-br from-theme to-accent">
-        <p className="text-4xl font-bold text-light ">
+      <section className="our-services text-center py-[100px] bg-servicesImg bg-cover bg-center bg-no-repeat">
+        {/* <section className="our-services text-center py-[100px] text-light bg-gradient-to-br from-theme to-accent"> */}
+        <p className="text-4xl font-bold text-accent ">
           Our Services
           <span className="text-sm block font-normal italic">
             SOME OF OUR OPERATIONS
@@ -157,7 +158,7 @@ const Main = () => {
 
         <div className="my-8 px-5">
           <ul
-            className={`relative md:flex flex-wrap bg-light/40 list-none shadow-sm rounded-t-xl ${
+            className={`relative md:flex flex-wrap bg-light/40 backdrop-blur-lg list-none shadow-sm rounded-t-xl ${
               activeTab === "agent" ? "bg-blue-gray-50/60" : ""
             }`}
             data-tabs="tabs"
@@ -166,7 +167,7 @@ const Main = () => {
             <li className="z-30 flex-auto text-center">
               <a
                 className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
-                  activeTab === "agent" ? "active bg-white text-theme" : ""
+                  activeTab === "agent" ? "active bg-theme text-light" : ""
                 }`}
                 data-tab-target="agent"
                 role="tab"
@@ -181,7 +182,7 @@ const Main = () => {
             <li className="z-30 flex-auto text-center">
               <a
                 className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
-                  activeTab === "pos" ? "active bg-white text-theme" : ""
+                  activeTab === "pos" ? "active bg-theme text-light" : ""
                 }`}
                 data-tab-target="pos"
                 role="tab"
@@ -196,7 +197,7 @@ const Main = () => {
             <li className="z-30 flex-auto md:text-center">
               <a
                 className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
-                  activeTab === "settings" ? "active bg-white text-theme" : ""
+                  activeTab === "settings" ? "active bg-theme text-light" : ""
                 }`}
                 data-tab-target="settings"
                 role="tab"
@@ -211,7 +212,7 @@ const Main = () => {
             <li className="z-30 flex-auto md:text-center">
               <a
                 className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
-                  activeTab === "pay" ? "active bg-white text-theme" : ""
+                  activeTab === "pay" ? "active bg-theme text-light" : ""
                 }`}
                 data-tab-target="pay"
                 role="tab"
@@ -226,7 +227,7 @@ const Main = () => {
             <li className="z-30 flex-auto md:text-center">
               <a
                 className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
-                  activeTab === "loan" ? "active bg-white text-theme" : ""
+                  activeTab === "loan" ? "active bg-theme text-light" : ""
                 }`}
                 data-tab-target="loan"
                 role="tab"
@@ -239,9 +240,14 @@ const Main = () => {
               </a>
             </li>
           </ul>
-          <div data-tab-content="" className="p-5 bg-light/50 rounded-b-xl">
+          <div
+            data-tab-content=""
+            className="p-10 bg-light/60 backdrop-blur-lg rounded-b-xl"
+          >
             <div
-              className={`block text-start ${activeTab === "agent" ? "" : "hidden"}`}
+              className={`block text-start ${
+                activeTab === "agent" ? "" : "hidden"
+              }`}
               id="agent"
               role="tabpanel"
             >
@@ -250,109 +256,155 @@ const Main = () => {
                 exposure.
               </p>
               <div className="m-3">
+                <p class="block text-sm font-light leading-none text-dark">
+                  We believe in transforming over a million Nigeria mobile money
+                  agents into certified agents!
+                </p>
+                <p class="block text-sm font-light mt-5 text-dark">
+                  In an effort to achieve these goals...
+                </p>
+                <ul className="list-disc text-dark mx-5 text-sm italic">
+                  <li>We provide enterpreneurial training for agents.</li>
+                  <li>
+                    We get agents certified in reputable instituitions within
+                    and outside Nigeria.
+                  </li>
+                  <li>
+                    We organize tours that creates necessary exposures to
+                    working systems across the globe.
+                  </li>
+                  <li>
+                    Ecosystem set-up paypoints for potential agents , train ,
+                    register agents with any CBN-licensed providers and helps to
+                    manage daily reconciliations.
+                  </li>
+                </ul>
 
-              <p class="block text-sm font-light leading-none text-dark">
-              We believe in transforming over a million Nigeria mobile money agents into certified agents!
-              </p>
-              <p class="block text-sm font-light mt-5 text-dark">
-              In an effort to achieve these goals...
-              </p>
-              <ul className="list-disc text-dark mx-5 text-sm italic">
-                <li>We provide enterpreneurial training for agents.</li>
-                <li>We get agents certified in reputable instituitions within and outside Nigeria.</li>
-                <li>We organize tours that creates necessary exposures to working systems across the globe.</li>
-                <li>Ecosystem set-up paypoints for potential agents , train , register agents with any CBN-licensed providers and helps to manage daily reconciliations.</li>
-              </ul>
-
-              <Link to="/" className="font-bold text-accent italic"> Learn More...</Link>
+                <Link to="/" className="font-bold text-accent italic">
+                  {" "}
+                  Learn More...
+                </Link>
               </div>
             </div>
             <div
-              className={`block text-start ${activeTab === "pos" ? "" : "hidden"}`}
+              className={`block text-start ${
+                activeTab === "pos" ? "" : "hidden"
+              }`}
               id="pos"
               role="tabpanel"
             >
-                  <p className="text-lg font-bold text-accent leading-tight">
-                  Ecosystem deploys pos terminals to Agents through her agent networks across Nigeria.
+              <p className="text-lg font-bold text-accent leading-tight">
+                Ecosystem deploys pos terminals to Agents through her agent
+                networks across Nigeria.
               </p>
-                  <p className="text-lg font-bold text-dark leading-tight">
-                  Our pos activity rate is about 95% due to our 24hrs agent support and reconciliation services.
+              <p className="text-lg font-bold text-dark leading-tight">
+                Our pos activity rate is about 95% due to our 24hrs agent
+                support and reconciliation services.
               </p>
               <div className="m-3">
+                <p class="block text-sm font-light mt-5 text-dark">
+                  This makes Ecosystem the number one choice for POS Agents. Get
+                  Ecosytem Partner Pos and enjoy the following benefits:
+                </p>
+                <ul className="list-disc text-dark mx-5 text-sm italic">
+                  <li>Instant settlements & Low charges.</li>
+                  <li>Commission for high performance.</li>
+                  <li>Good network & Instant attention to issues</li>
+                  <li>Float & Loan</li>
+                </ul>
 
-             
-              <p class="block text-sm font-light mt-5 text-dark">
-              This makes Ecosystem the number one choice for POS Agents. Get Ecosytem Partner Pos and enjoy the following benefits:
-              </p>
-              <ul className="list-disc text-dark mx-5 text-sm italic">
-                <li>Instant settlements & Low charges.</li>
-                <li>Commission for high performance.</li>
-                <li>Good network & Instant attention to issues</li>
-                <li>Float & Loan</li>
-              </ul>
-
-              <Link to="/" className="font-bold text-accent italic"> Learn More...</Link>
+                <Link to="/" className="font-bold text-accent italic">
+                  {" "}
+                  Learn More...
+                </Link>
               </div>
             </div>
             <div
-              className={`block text-start ${activeTab === "settings" ? "" : "hidden"}`}
+              className={`block text-start ${
+                activeTab === "settings" ? "" : "hidden"
+              }`}
               id="settings"
               role="tabpanel"
             >
-                <p className="text-lg font-bold text-accent leading-tight">
-                Ecosystem is one of the top aggregators for BVN , NIN , house enumerations etc
+              <p className="text-lg font-bold text-accent leading-tight">
+                Ecosystem is one of the top aggregators for BVN , NIN , house
+                enumerations etc
               </p>
               <div className="m-3">
-
-              
-              <ul className="list-disc text-dark mx-5 text-sm">
-                <li>We mobilize agents and create enrollment centres across Nigeria.</li>
-                <li>We also create awareness concerning new goverment policies regarding NIN and BVN.</li>
-               
-              </ul>
+                <ul className="list-disc text-dark mx-5 text-sm">
+                  <li>
+                    We mobilize agents and create enrollment centres across
+                    Nigeria.
+                  </li>
+                  <li>
+                    We also create awareness concerning new goverment policies
+                    regarding NIN and BVN.
+                  </li>
+                </ul>
 
                 <p className="text-sm font-bold text-dark leading-tight">
-               To get your NIN registration done without hassle...<Link to="/" className="font-bold text-accent italic">  Book Now...</Link>
-              </p>
-              
+                  To get your NIN registration done without hassle...
+                  <Link to="/" className="font-bold text-accent italic">
+                    {" "}
+                    Book Now...
+                  </Link>
+                </p>
               </div>
             </div>
             <div
-              className={`block text-start ${activeTab === "pay" ? "" : "hidden"}`}
+              className={`block text-start ${
+                activeTab === "pay" ? "" : "hidden"
+              }`}
               id="pay"
               role="tabpanel"
             >
-                      <p className="text-lg font-bold text-accent leading-tight">
-                      We continuously establish access points for cash deposits and cash withdrawals especially at rural, semi urban & generally unbanked areas.
+              <p className="text-lg font-bold text-accent leading-tight">
+                We continuously establish access points for cash deposits and
+                cash withdrawals especially at rural, semi urban & generally
+                unbanked areas.
               </p>
               <div className="m-3">
+                <p class="block text-base font-light leading-none text-dark">
+                  Leveraging on our wide coverage and rural presence in Nigeria,
+                  Ecosystem works with government agencies in disbursements of
+                  social packages, soft loans, micro credits ( by private
+                  lenders ) and collections ( informal revenues ,loan repayments
+                  etc)
+                </p>
 
-              <p class="block text-base font-light leading-none text-dark">
-              Leveraging on our wide coverage and rural presence in Nigeria, Ecosystem works with government agencies in disbursements of social packages, soft loans, micro credits ( by private lenders ) and collections ( informal revenues ,loan repayments etc)
-              </p>
-              
-
-              <Link to="/" className="font-bold text-accent italic"> Learn More...</Link>
-              </div>            </div>
+                <Link to="/" className="font-bold text-accent italic">
+                  {" "}
+                  Learn More...
+                </Link>
+              </div>{" "}
+            </div>
             <div
-              className={`block text-start ${activeTab === "loan" ? "" : "hidden"}`}
+              className={`block text-start ${
+                activeTab === "loan" ? "" : "hidden"
+              }`}
               id="loan"
               role="tabpanel"
             >
-                           <p className="text-lg font-bold text-accent leading-tight">
-                           Ecosystem Provide Micro Loan Strictly For Unicorn Agent For Working Capital And This is Done Within:
+              <p className="text-lg font-bold text-accent leading-tight">
+                Ecosystem Provide Micro Loan Strictly For Unicorn Agent For
+                Working Capital And This is Done Within:
               </p>
               <div className="m-3">
+                <ul className="list-disc text-dark mx-5 text-sm">
+                  <li>Application-disbursement in 24hrs</li>
+                  <li>Monthly Repayment in 24hrs</li>
+                  <li>Competitive rate (Discount for early repayment)</li>
+                  <li>
+                    Amount depends on agent bank account analysis (Up to 5
+                    million)
+                  </li>
+                  <li>No collateral</li>
+                </ul>
 
-              <ul className="list-disc text-dark mx-5 text-sm">
-                <li>Application-disbursement in 24hrs</li>
-                <li>Monthly Repayment in 24hrs</li>
-                <li>Competitive rate (Discount for early repayment)</li>
-                <li>Amount depends on agent bank account analysis (Up to 5 million)</li>
-                <li>No collateral</li>
-              </ul>
-
-              <Link to="/" className="font-bold text-accent italic"> Apply Now...</Link>
+                <Link to="/" className="font-bold text-accent italic">
+                  {" "}
+                  Apply Now...
+                </Link>
               </div>
             </div>
           </div>
@@ -363,7 +415,11 @@ const Main = () => {
 
       {/* ENROLL */}
       <section className="why-us md:flex justify-between">
-        <img src={signUpImage} alt="" className="md:w-2/4 object-cover object-center " />
+        <img
+          src={signUpImage}
+          alt=""
+          className="md:block hidden md:w-2/4 object-cover object-center "
+        />
         <div className="my-5 text-center py-[100px] bg-light backdrop-blur-sm p-4 md:px-8">
           <p className="text-4xl font-bold text-accent my-8">
             Enroll As A Mobile Money Unicorn Agent
@@ -375,17 +431,88 @@ const Main = () => {
               Nigeria.
             </span>
           </p>
-        <Link
-          to="/"
-          className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
-        >
-          {" "}
-          Register Here
-        </Link>
+          <Link
+            to="/"
+            className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
+          >
+            {" "}
+            Register Here
+          </Link>
         </div>
-
       </section>
       {/* ENROLL END */}
+
+      {/* OUR ACHIEVEMENTS  */}
+
+      <section className="achievements text-center py-[100px] bg-light backdrop-blur-sm px-8">
+        <p className="text-4xl font-bold text-accent">
+          Our Achievements So Far
+          <span className="text-sm block font-normal italic w-[60%] m-auto">
+            OUR ACHIEVEMENTS
+          </span>
+        </p>
+
+        <div className="md:flex justify-center gap-auto m-4 block">
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">
+              Annual Cash-In Value
+            </p>
+            <p className="">18,500,000,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">
+              Annual Cash-Out Value
+            </p>
+            <p className="">24,000,000,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">Agents Set-Up</p>
+            <p className="">over 5,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500"> Financial Access Points</p>
+            <p className="">over 10,000</p>
+          </div>
+        </div>
+      </section>
+
+      {/* END OF OUR ACHIEVEMENTS  */}
+
+      {/* FAQs  */}
+
+      <section className="achievements text-center py-[100px] bg-gradient-to-r from-theme to-accent backdrop-blur-sm px-8">
+        <p className="text-4xl font-bold text-light">
+          FAQs
+          <span className="text-sm block font-normal italic text-light w-[60%] m-auto">
+            YOU'VE GOT QUESTIONS? <br /> WE'VE GOT ANSWERS!
+          </span>
+        </p>
+
+        <div className="md:flex justify-center gap-auto m-4 block">
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">
+              Annual Cash-In Value
+            </p>
+            <p className="">18,500,000,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">
+              Annual Cash-Out Value
+            </p>
+            <p className="">24,000,000,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500">Agents Set-Up</p>
+            <p className="">over 5,000</p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <p className="text-base text-center text-gray-500"> Financial Access Points</p>
+            <p className="">over 10,000</p>
+          </div>
+        </div>
+      </section>
+
+      {/* END OF FAQs  */}
     </div>
   );
 };
