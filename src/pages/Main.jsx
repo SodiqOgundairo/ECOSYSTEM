@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import headershape from "../assets/img/hero-shape.svg";
+import moneyMan from "../assets/img/money-bag.jpg";
 import { SiBroadcom } from "react-icons/si"; 
 import { MdOutlineThumbUpAlt } from "react-icons/md";
 import { MdOutlineCenterFocusStrong } from "react-icons/md";
 import { useState } from "react";
+
 
 const Main = () => {
     const [activeTab, setActiveTab] = useState("app");
@@ -41,7 +43,8 @@ const Main = () => {
 
 
       {/* WHY US */}
-
+{/* 
+// ONLY UNCOMMENT THIS TO GET A REGULAR CARD WHY US TYPE
       <section className="why-us text-center py-[100px] bg-light backdrop-blur-sm px-8">
         <p className="text-4xl font-bold text-accent">
           Why Choose Ecosystem
@@ -74,6 +77,61 @@ const Main = () => {
             <p className="">
             We can help you establish a Mobile Money Agent within a very short period of time
             </p>
+          </div>
+        </div>
+      </section>
+       */}
+      {/* END OF WHY US  */}
+
+
+      {/* WHY US */}
+
+      <section className="why-us py-[100px] bg-light">
+        <p className="text-4xl font-bold text-accent px-8">
+          Why Choose Ecosystem
+          <span className="text-sm block font-normal italic md:w-1/3">
+            Ecosystem is Nigeria's #1 agent network management company that
+            serves as a gateway to the banked and unbanked communities in
+            Nigeria.
+          </span>
+        </p>
+
+      <div className="md:flex">
+
+        <div className="md:flex flex-col gap-auto m-4 md:m-0 ">
+          <div className="md:flex">
+
+          <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <SiBroadcom className="m-auto text-4xl text-accent hover:text-light" />
+            <p className="text-xl">Broad Network</p>
+            <p className="text-center">
+              We have business relationship with over 50 Mobile Money Operators
+              and over 40 banks
+            </p>
+          </div>
+          <div className="shadow-lg flex flex-col justify-center bg-light p-7 m-4 text-center rounded-lg hover:bg-accent hover:text-light">
+            <MdOutlineCenterFocusStrong className="m-auto text-4xl text-accent hover:text-light" />
+            <p className="text-xl">Intergrity</p>
+            <p className="">
+            We have assisted in establishment of over 10,000 agents across the country.
+            </p>
+          </div>
+          </div>
+
+          <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-accent hover:text-light">
+            <MdOutlineThumbUpAlt className="m-auto text-4xl text-accent hover:text-light" />
+            <p className="text-xl">Efficiency</p>
+            <p className="">
+            We can help you establish a Mobile Money Agent within a very short period of time
+            </p>
+          </div>
+
+          </div>
+
+          <div className="md:w-2/3">
+
+
+<img src={moneyMan} alt="" />
           </div>
         </div>
       </section>
