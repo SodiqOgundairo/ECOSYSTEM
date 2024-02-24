@@ -10,6 +10,8 @@ import { FaCheckToSlot, FaUsers } from "react-icons/fa6";
 import { ImUserTie } from "react-icons/im";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { GiTakeMyMoney } from "react-icons/gi";
+import { Button } from "@material-tailwind/react";
+import { AccordionCustomAnimation } from "../components/Faq";
 
 const Main = () => {
   const [activeTab, setActiveTab] = useState("agent");
@@ -470,7 +472,10 @@ const Main = () => {
             <p className="">over 5,000</p>
           </div>
           <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
-            <p className="text-base text-center text-gray-500"> Financial Access Points</p>
+            <p className="text-base text-center text-gray-500">
+              {" "}
+              Financial Access Points
+            </p>
             <p className="">over 10,000</p>
           </div>
         </div>
@@ -481,35 +486,14 @@ const Main = () => {
       {/* FAQs  */}
 
       <section className="achievements text-center py-[100px] bg-gradient-to-r from-theme to-accent backdrop-blur-sm px-8">
-        <p className="text-4xl font-bold text-light">
+        <p className="text-4xl font-bold text-light my-10">
           FAQs
           <span className="text-sm block font-normal italic text-light w-[60%] m-auto">
             YOU'VE GOT QUESTIONS? <br /> WE'VE GOT ANSWERS!
           </span>
         </p>
 
-        <div className="md:flex justify-center gap-auto m-4 block">
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
-            <p className="text-base text-center text-gray-500">
-              Annual Cash-In Value
-            </p>
-            <p className="">18,500,000,000</p>
-          </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
-            <p className="text-base text-center text-gray-500">
-              Annual Cash-Out Value
-            </p>
-            <p className="">24,000,000,000</p>
-          </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
-            <p className="text-base text-center text-gray-500">Agents Set-Up</p>
-            <p className="">over 5,000</p>
-          </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
-            <p className="text-base text-center text-gray-500"> Financial Access Points</p>
-            <p className="">over 10,000</p>
-          </div>
-        </div>
+        <AccordionCustomAnimation />
       </section>
 
       {/* END OF FAQs  */}
