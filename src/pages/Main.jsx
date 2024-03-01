@@ -10,7 +10,6 @@ import { FaCheckToSlot, FaUsers } from "react-icons/fa6";
 import { ImUserTie } from "react-icons/im";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { GiTakeMyMoney } from "react-icons/gi";
-import { Button } from "@material-tailwind/react";
 import { AccordionCustomAnimation } from "../components/Faq";
 
 const Main = () => {
@@ -23,20 +22,25 @@ const Main = () => {
   return (
     <div>
       <section className="hero bg-heroImg bg-no-repeat bg-cover bg-center">
-        <div className="hero-text text-center rounded-lg py-[80px] md:p-[130px] ">
-          <p className="text-[30px] leading-none md:text-[60px] font-bold text-accent ">
+        <div className="hero-text text-center rounded-lg py-[150px] md:p-[150px] ">
+          <p
+            className="text-[30px] leading-none md:text-[60px] font-bold text-accent"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             Easy Agent Network{" "}
             <span className="md:block"> Management Services!</span>
           </p>
 
           <ul className="p-4 pb-8">
-            <li className="text-sm md:text-lg m-2">
+            <li className="text-sm md:text-lg m-2" data-aos="fade-down-right">
               Nigeria's number #1 agent network management company
             </li>
-            <li className="text-sm md:text-lg m-2">
+            <li className="text-sm md:text-lg m-2" data-aos="fade-right">
               Gateway to the banked and unbanked communities in Nigeria.
             </li>
-            <li className="text-sm md:text-lg m-2">
+            <li className="text-sm md:text-lg m-2" data-aos="fade-up-left">
               Patners with 80% of Nigerian licensed superagents, ptsps, MMOs and
               banks
             </li>
@@ -45,6 +49,7 @@ const Main = () => {
           <Link
             to="/"
             className="px-10 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
+            data-aos="fade-up"
           >
             {" "}
             Be A Unicorn Agent{" "}
@@ -100,7 +105,7 @@ const Main = () => {
       {/* WHY US */}
 
       <section className="why-us py-[100px] bg-light">
-        <p className="text-4xl font-bold text-accent px-8">
+        <p className="text-4xl font-bold text-accent px-8"  data-aos="fade-left">
           Why Choose Ecosystem
           <span className="text-sm block font-normal italic md:w-1/3">
             Ecosystem is Nigeria's #1 agent network management company that
@@ -112,7 +117,8 @@ const Main = () => {
         <div className="md:flex">
           <div className="md:flex flex-col gap-auto m-4 md:m-0 ">
             <div className="md:flex">
-              <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light">
+              <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
+               data-aos="flip-up">
                 <SiBroadcom className="m-auto text-4xl text-accent hover:text-light" />
                 <p className="text-xl">Broad Network</p>
                 <p className="text-center">
@@ -120,7 +126,8 @@ const Main = () => {
                   Operators and over 40 banks
                 </p>
               </div>
-              <div className="shadow-lg flex flex-col justify-center bg-light p-7 m-4 text-center rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light">
+              <div className="shadow-lg flex flex-col justify-center bg-light p-7 m-4 text-center rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
+               data-aos="flip-down">
                 <MdOutlineCenterFocusStrong className="m-auto text-4xl text-accent hover:text-light" />
                 <p className="text-xl">Intergrity</p>
                 <p className="">
@@ -130,7 +137,8 @@ const Main = () => {
               </div>
             </div>
 
-            <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light">
+            <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
+             data-aos="flip-right">
               <MdOutlineThumbUpAlt className="m-auto text-4xl text-accent hover:text-light" />
               <p className="text-xl">Efficiency</p>
               <p className="">
@@ -140,7 +148,7 @@ const Main = () => {
             </div>
           </div>
 
-          <div className="md:w-2/3">
+          <div className="md:w-2/3"  data-aos="zoom-in-up">
             <img src={moneyMan} alt="" />
           </div>
         </div>
@@ -149,16 +157,16 @@ const Main = () => {
       {/* END OF WHY US  */}
 
       {/* OUR SERVICES */}
-      <section className="our-services text-center py-[100px] bg-servicesImg bg-cover bg-center bg-no-repeat">
+      <section className="our-services text-center py-[100px] bg-servicesImg bg-cover bg-center bg-no-repeat"  data-aos="zoom-in-up">
         {/* <section className="our-services text-center py-[100px] text-light bg-gradient-to-br from-theme to-accent"> */}
-        <p className="text-4xl font-bold text-accent ">
+        <p className="text-4xl font-bold text-accent"  data-aos="fade-right">
           Our Services
-          <span className="text-sm block font-normal italic">
+          <span className="text-sm block font-normal italic"  data-aos="fade-up">
             SOME OF OUR OPERATIONS
           </span>
         </p>
 
-        <div className="my-8 px-5">
+        <div className="my-8 px-5"  data-aos="fade-up-right">
           <ul
             className={`relative md:flex flex-wrap bg-light/40 backdrop-blur-lg list-none shadow-sm rounded-t-xl ${
               activeTab === "agent" ? "bg-blue-gray-50/60" : ""
@@ -416,19 +424,20 @@ const Main = () => {
       {/* END OF OUR SERVICES */}
 
       {/* ENROLL */}
-      <section className="why-us md:flex justify-between">
+      <section className="why-us md:flex justify-between bg-light">
         <img
           src={signUpImage}
           alt=""
           className="md:block hidden md:w-2/4 object-cover object-center "
+          data-aos="fade-right"
         />
-        <div className="my-5 text-center py-[100px] bg-light backdrop-blur-sm p-4 md:px-8">
-          <p className="text-4xl font-bold text-accent my-8">
+        <div className="my-5 text-center py-[100px] bg-light backdrop-blur-sm p-4 md:px-8"  data-aos="fade-left">
+          <p className="text-4xl font-bold text-accent my-8"  data-aos="flip-left">
             Enroll As A Mobile Money Unicorn Agent
-            <span className="text-sm block font-normal italic w-[60%] m-auto">
+            <span className="text-sm block font-normal italic w-[60%] m-auto"  data-aos="zoom-in-up">
               Join the largest viable agent network in Nigeria
             </span>
-            <span className="text-sm block font-normal italic w-[60%] m-auto">
+            <span className="text-sm block font-normal italic w-[60%] m-auto"  data-aos="zoom-in-up">
               Take a bold step and join one of the fastest growing industries in
               Nigeria.
             </span>
@@ -436,7 +445,7 @@ const Main = () => {
           <Link
             to="/"
             className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
-          >
+            data-aos="zoom-in-down"  >
             {" "}
             Register Here
           </Link>
@@ -446,32 +455,32 @@ const Main = () => {
 
       {/* OUR ACHIEVEMENTS  */}
 
-      <section className="achievements text-center py-[100px] bg-light backdrop-blur-sm px-8">
-        <p className="text-4xl font-bold text-accent">
+      <section className="achievements text-center py-[100px] bg-light backdrop-blur-sm px-8"  data-aos="zoom-in-down">
+        <p className="text-4xl font-bold text-accent"  data-aos="zoom-in-up">
           Our Achievements So Far
-          <span className="text-sm block font-normal italic w-[60%] m-auto">
+          <span className="text-sm block font-normal italic w-[60%] m-auto"  data-aos="zoom-in-up">
             OUR ACHIEVEMENTS
           </span>
         </p>
 
-        <div className="md:flex justify-center gap-auto m-4 block">
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+        <div className="md:flex justify-center gap-auto m-4 block" >
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light" data-aos="flip-right">
             <p className="text-base text-center text-gray-500">
               Annual Cash-In Value
             </p>
             <p className="">18,500,000,000</p>
           </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light" data-aos="zoom-out-right">
             <p className="text-base text-center text-gray-500">
               Annual Cash-Out Value
             </p>
             <p className="">24,000,000,000</p>
           </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light" data-aos="zoom-out-left">
             <p className="text-base text-center text-gray-500">Agents Set-Up</p>
             <p className="">over 5,000</p>
           </div>
-          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light">
+          <div className="shadow-lg flex flex-col justify-center bg-light p-10 m-4 rounded-lg hover:bg-accent hover:text-light" data-aos="zoom-in-right">
             <p className="text-base text-center text-gray-500">
               {" "}
               Financial Access Points
@@ -485,10 +494,10 @@ const Main = () => {
 
       {/* FAQs  */}
 
-      <section className="achievements text-center py-[100px] bg-gradient-to-r from-theme to-accent backdrop-blur-sm px-8">
-        <p className="text-4xl font-bold text-light my-10">
+      <section className="achievements text-center py-[100px] bg-gradient-to-r from-theme to-accent backdrop-blur-sm px-8"  data-aos="flip-down">
+        <p className="text-4xl font-bold text-light my-10"  data-aos="fade-down">
           FAQs
-          <span className="text-sm block font-normal italic text-light w-[60%] m-auto">
+          <span className="text-sm block font-normal italic text-light w-[60%] m-auto"  data-aos="zoom-in-up">
             YOU'VE GOT QUESTIONS? <br /> WE'VE GOT ANSWERS!
           </span>
         </p>

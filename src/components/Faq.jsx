@@ -16,7 +16,7 @@ export function AccordionCustomAnimation() {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <>
+    <section  data-aos="flip-up">
       <Accordion open={open === 1} animate={CUSTOM_ANIMATION} className="">
         <AccordionHeader
           onClick={() => handleOpen(1)}
@@ -62,6 +62,6 @@ How long is the training to become an agent?
         A week or maximum of 2 weeks including practical session at a functioning location.
         </AccordionBody>
       </Accordion>
-    </>
+    </section>
   );
 }
