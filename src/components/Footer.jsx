@@ -3,6 +3,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { AiFillInstagram } from "react-icons/ai";
 import logo from "../assets/img/logo.png";
+import { Link } from "react-router-dom";
 
 const Footers = () => {
   const date = new Date();
@@ -52,7 +53,7 @@ const Footers = () => {
           <p className="text-2xl text-theme font-bold">Useful Links</p>
           <ul className="text-accent list-disc ">
             <li className="hover:list-none hover:text-theme"> Home </li>
-            <li className="hover:list-none hover:text-theme"> About Us </li>
+            <li className="hover:list-none hover:text-theme"> <Link to="/about"> About Us </Link> </li>
             <li className="hover:list-none hover:text-theme">Contact </li>
             <li className="hover:list-none hover:text-theme">Locate Us</li>
             <li className="hover:list-none hover:text-theme">
@@ -78,13 +79,16 @@ const Footers = () => {
               Be a Unicorn Agent
             </li>
             <li className="hover:list-none hover:text-theme">
-              NIN Registration{" "}
+              <Link to="/nin-registration"> NIN Registration</Link>
             </li>
           </ul>
         </div>
 
         <div className="Contact Detiails m-4 md:m-0">
           <p className="text-2xl text-theme font-bold">Contact Us</p>
+          <address className="text-accent">
+          5 lumen city estate wuye FCT ABUJA.
+          </address>
           <address className="text-accent">
             72 Remilekun Building Adekunle Fajuyi Road <br /> Dugbe, Ibadan,
             Nigeria

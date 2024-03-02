@@ -21,6 +21,8 @@ const Main = () => {
 
   return (
     <div>
+
+      {/* HERO */}
       <section className="hero bg-heroImg bg-no-repeat bg-cover bg-center">
         <div className="hero-text text-center rounded-lg py-[150px] md:p-[150px] ">
           <p
@@ -48,7 +50,7 @@ const Main = () => {
 
           <Link
             to="/"
-            className="px-10 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
+            className="px-10 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-light rounded-lg"
             data-aos="fade-up"
           >
             {" "}
@@ -444,7 +446,7 @@ const Main = () => {
           </p>
           <Link
             to="/"
-            className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent hover:shadow-lg text-light rounded-lg"
+            className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-light rounded-lg"
             data-aos="zoom-in-down"  >
             {" "}
             Register Here

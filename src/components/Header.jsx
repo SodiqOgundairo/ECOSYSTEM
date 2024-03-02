@@ -4,12 +4,18 @@ import logo from "../assets/img/logo.png";
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
+import { AiOutlineDown } from "react-icons/ai";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOperationsDropdownOpen, setIsOperationsDropdownOpen] = useState(false); // State for dropdown
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleOperationsDropdown = () => {
+    setIsOperationsDropdownOpen(!isOperationsDropdownOpen); // Toggle dropdown state
   };
 
   return (
@@ -21,8 +27,22 @@ const Header = () => {
       <nav className="md:flex gap-7 hidden">
         <div className="gap-9 flex">
           <Link to="/"> Home </Link>
-          <Link to="/"> About Us </Link>
-          <Link to="/"> Operations </Link>
+          <Link to="/about"> About Us </Link>       
+          <div className="relative">
+            <Link to="/" onClick={toggleOperationsDropdown}>
+              Operations <AiOutlineDown className="ml-2 inline" />
+            </Link>
+            {isOperationsDropdownOpen && ( // Conditionally render dropdown content
+              <ul className="absolute top-full left-0 bg-light w-[250px] rounded-lg shadow-md px-4 py-4 z-50">
+                <li>
+                  <Link to="/" className="hover:text-theme my-3">Sub-Operation 1</Link>
+                </li>
+                <li>
+                  <Link to="/"className="hover:text-theme my-3">Sub-Operation 2</Link>
+                </li>
+              </ul>
+            )}
+          </div>
           <Link to="/"> Contact Us </Link>
         </div>
 
@@ -40,8 +60,21 @@ const Header = () => {
       >
         <div  className={`backdrop-blur-sm md:hidden fixed top-0 left-0 right-0 bottom-0 z-50 bg-light/30 flex flex-col gap-4 py-4 px-6 transition-all duration-200 ease-in-out ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <Link to="/">Home</Link>
-          <Link to="/">About Us</Link>
-          <Link to="/">Operations</Link>
+          <Link to="/about"> About Us </Link><div className="relative w-full">
+            <Link to="/" onClick={toggleOperationsDropdown}>
+              Operations <AiOutlineDown className="ml-2 inline" />
+            </Link>
+            {isOperationsDropdownOpen && ( // Conditionally render dropdown content
+              <ul className="absolute top-full left-0 bg-white rounded-lg shadow-md px-2 py-4 z-50 w-full">
+                <li>
+                  <Link to="/">Sub-Operation 1</Link>
+                </li>
+                <li>
+                  <Link to="/">Sub-Operation 2</Link>
+                </li>
+              </ul>
+            )}
+          </div>
           <Link to="/">Contact Us</Link>
 
           <Link to="/" className="px-4 py-2 bg-theme text-light rounded-lg w-auto shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"> Be A Unicorn Agent </Link>

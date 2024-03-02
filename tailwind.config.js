@@ -14,6 +14,7 @@ module.exports = withMT({
         },
         backgroundImage: {
           'heroImg': "url('../img/hero-bg.jpg')",
+          'aboutHero': "url('../img/hero-about.jpg')",
           'servicesImg': "url('../img/services-bg.jpg')",
         }
       },
