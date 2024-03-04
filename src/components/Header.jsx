@@ -1,9 +1,10 @@
+
 // import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 
 const Header = () => {
@@ -18,6 +19,21 @@ const Header = () => {
     setIsOperationsDropdownOpen(!isOperationsDropdownOpen); // Toggle dropdown state
   };
 
+  
+  // Handle click outside of dropdown to close
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOperationsDropdownOpen && !event.target.closest(".operations-dropdown")) { // Check if clicked outside dropdown
+        setIsOperationsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside); // Add event listener
+
+    return () => document.removeEventListener("click", handleClickOutside); // Remove event listener on cleanup
+  }, [isOperationsDropdownOpen]); // Re-run effect when isOperationsDropdownOpen changes
+
+
   return (
     <header className="flex justify-between px-4 py-3 shadow-sm bg-light/30 backdrop-blur-lg fixed z-20 w-full items-center">
       <div className="flex items-center">
@@ -29,16 +45,22 @@ const Header = () => {
           <Link to="/"> Home </Link>
           <Link to="/about"> About Us </Link>       
           <div className="relative">
-            <Link to="/" onClick={toggleOperationsDropdown}>
-              Operations <AiOutlineDown className="ml-2 inline" />
-            </Link>
+            <p onMouseOver={toggleOperationsDropdown} >
+              Operations <AiOutlineDown className="ml-2 inline cursor-pointer" />
+            </p>
             {isOperationsDropdownOpen && ( // Conditionally render dropdown content
-              <ul className="absolute top-full left-0 bg-light w-[250px] rounded-lg shadow-md px-4 py-4 z-50">
+              <ul className="absolute top-full left-0 bg-light w-[250px] rounded-lg shadow-md px-4 py-4 z-50 flex flex-col gap-4">
                 <li>
-                  <Link to="/" className="hover:text-theme my-3">Sub-Operation 1</Link>
+                  <Link to="/nin-registration" className="hover:text-theme my-3">NIN Registration</Link>
                 </li>
                 <li>
-                  <Link to="/"className="hover:text-theme my-3">Sub-Operation 2</Link>
+                  <Link to="/agent-network-mgt"className="hover:text-theme my-3">Agent Network </Link>
+                </li>
+                <li>
+                  <Link to="/pay-point"className="hover:text-theme my-3">Pay Point </Link>
+                </li>
+                <li>
+                  <Link to="/pos-distribution"className="hover:text-theme my-3">POS Deployment </Link>
                 </li>
               </ul>
             )}
@@ -65,12 +87,18 @@ const Header = () => {
               Operations <AiOutlineDown className="ml-2 inline" />
             </Link>
             {isOperationsDropdownOpen && ( // Conditionally render dropdown content
-              <ul className="absolute top-full left-0 bg-white rounded-lg shadow-md px-2 py-4 z-50 w-full">
+              <ul className="absolute top-full left-0 bg-white rounded-lg shadow-md px-2 py-4 w-full ">
                 <li>
-                  <Link to="/">Sub-Operation 1</Link>
+                  <Link to="/nin-registration">NIN Registration</Link>
                 </li>
                 <li>
-                  <Link to="/">Sub-Operation 2</Link>
+                  <Link to="/agent-network-mgt">Agent Network</Link>
+                <li>
+                  <Link to="/pay-point"className="hover:text-theme my-3">Pay Point </Link>
+                </li>
+                <li>
+                <Link to="/pos-distribution"className="hover:text-theme my-3">POS Deployment </Link>
+                </li>
                 </li>
               </ul>
             )}
@@ -83,13 +111,14 @@ const Header = () => {
       </div>
 
       <button
-        className={`md:hidden focus:outline-none flex items-center z-50 mr-3 ${isMobileMenuOpen ? '' : 'hover:text-gray-700'}`}
-        onClick={toggleMobileMenu}
-      >
-        <MdMenu className={`w-6 h-6 mr-2 ${isMobileMenuOpen ? 'hidden' : ''}`} />
-        <MdClose className={`w-6 h-6 mr-2 ${isMobileMenuOpen ? '' : 'hidden'}`} />
-       
-      </button>
+  className={`md:hidden focus:outline-none flex items-center z-50 mr-3 ${isMobileMenuOpen ? '' : 'hover:text-gray-700'}`}
+  onClick={toggleMobileMenu}
+  style={{ opacity: isMobileMenuOpen ? 1 : 0 }} // Set initial opacity based on state
+>
+  <MdMenu className={`w-6 h-6 mr-2 ${isMobileMenuOpen ? 'hidden' : ''}`} />
+  <MdClose className={`w-6 h-6 mr-2 ${isMobileMenuOpen ? '' : 'hidden'}`} />
+</button>
+
 
     </header>
   );

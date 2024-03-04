@@ -16,6 +16,10 @@ module.exports = withMT({
           'heroImg': "url('../img/hero-bg.jpg')",
           'aboutHero': "url('../img/hero-about.jpg')",
           'servicesImg': "url('../img/services-bg.jpg')",
+          'ninHero': "url('../img/ninReg.png')",
+          'agentHero': "url('../img/agent.jpg')",
+          'payHero': "url('../img/paypoint.jpg')",
+          'posHero': "url('../img/pos.jpg')",
         }
       },
     },
