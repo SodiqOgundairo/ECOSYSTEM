@@ -65,11 +65,11 @@ const Header = () => {
               </ul>
             )}
           </div>
-          <Link to="/"> Contact Us </Link>
+          <Link to="/contact-us"> Contact Us </Link>
         </div>
 
         <div>
-          <Link to="/" className="text-white bg-gradient-to-br from-accent to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"> Be A Unicorn Agent </Link>
+          <Link to="/be-a-unicorn-agent" className="text-white bg-gradient-to-br from-accent to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"> Be A Unicorn Agent </Link>
         </div>
       </nav>
 
@@ -103,9 +103,9 @@ const Header = () => {
               </ul>
             )}
           </div>
-          <Link to="/">Contact Us</Link>
+          <Link to="/contact-us">Contact Us</Link>
 
-          <Link to="/" className="px-4 py-2 bg-theme text-light rounded-lg w-auto shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"> Be A Unicorn Agent </Link>
+          <Link to="/be-a-unicorn-agent" className="px-4 py-2 bg-theme text-light rounded-lg w-auto shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80"> Be A Unicorn Agent </Link>
         </div>
         
       </div>

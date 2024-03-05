@@ -49,7 +49,7 @@ const Main = () => {
           </ul>
 
           <Link
-            to="/"
+            to="/be-a-unicorn-agent"
             className="px-10 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-light rounded-lg"
             data-aos="fade-up"
           >

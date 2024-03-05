@@ -10,6 +10,8 @@ import NinReg from "./pages/NinREg";
 import Agent from "./pages/Agent";
 import Paypoint from "./pages/Paypoint";
 import POS from "./pages/POS";
+import Contact from "./pages/Contact";
+import Unicorn from "./pages/Unicorn";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route path="/agent-network-mgt" element={<Agent />} />
         <Route path="/pay-point" element={<Paypoint />} />
         <Route path="/pos-distribution" element={<POS />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/be-a-unicorn-agent" element={<Unicorn />} />
         </Routes>
       <Footers />
     </div>
