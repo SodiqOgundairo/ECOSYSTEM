@@ -20,6 +20,8 @@ function App() {
       // Optional configuration options for AOS
     });
   }, []);
+
+  
   
   return (
     <div>

@@ -124,11 +124,10 @@ const Main = () => {
                 <SiBroadcom className="m-auto text-4xl text-accent hover:text-light" />
                 <p className="text-xl">Broad Network</p>
                 <p className="text-center">
-                  We have business relationship with over 50 Mobile Money
-                  Operators and over 40 banks
+                Ecosystem agents are present in 774 local government in Nigeria as CICO , NIN ,BVN or enumeration agents.
                 </p>
               </div>
-              <div className="shadow-lg flex flex-col justify-center bg-light p-7 m-4 text-center rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
+              {/* <div className="shadow-lg flex flex-col justify-center bg-light p-7 m-4 text-center rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
                data-aos="flip-down">
                 <MdOutlineCenterFocusStrong className="m-auto text-4xl text-accent hover:text-light" />
                 <p className="text-xl">Intergrity</p>
@@ -136,7 +135,7 @@ const Main = () => {
                   We have assisted in establishment of over 10,000 agents across
                   the country.
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <div className="shadow-lg flex flex-col justify-center text-center bg-light p-7 m-4 rounded-lg hover:bg-gradient-to-br hover:from-accent hover:to-theme hover:text-light"
