@@ -1,6 +1,4 @@
 import contactImage from "../assets/img/contact.jpg";
-import { Link } from "react-router-dom";
-import { AccordionCustomAnimation } from "../components/Faq";
 
 const Contact = () => {
   return (

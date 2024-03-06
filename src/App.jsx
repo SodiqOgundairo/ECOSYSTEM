@@ -26,7 +26,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Routes>
+      <Routes>face
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/nin-registration" element={<NinReg />} />
