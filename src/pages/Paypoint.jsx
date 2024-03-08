@@ -25,14 +25,14 @@ const Paypoint = () => {
         {/* ecosystem */}
 
         <section className="why-us py-[70px] bg-light" data-aos="fade-up-right">
-          <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
+          {/* <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
             <p
               className="text-2xl md:text-4xl font-bold text-accent px-8 text-center"
               data-aos="fade-left"
             >
              Ecosystem offer programs and services that educate, orientate and expose agents to standard practices for better service delivery
             </p>
-          </div>
+          </div> */}
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-6" data-aos="zoom-in-down">
             <div className="flex flex-col bg-light shadow-lg shadow-gray-300 text-accent hover:bg-theme hover:text-light p-9 rounded-lg" data-aos="zoom-in-left">
@@ -65,9 +65,9 @@ If you find yourself at any of these financially excluded areas , search for Eco
             <div className="flex flex-col bg-light shadow-lg shadow-gray-300 text-accent hover:bg-theme hover:text-light p-9 rounded-lg" data-aos="zoom-in-up">
             <GiCash className="text-4xl m-0" />
                 <p className="text-2xl  font-bold">
-                Thrift Contributions
+                Thrift Contributions/Cooperative Management
                 <span className="block text-base text-dark font-normal hover:text-white">
-                Thrift contributions involves groups of people coming together to contribute an agreed amout of money that would be rotated amongst members of the group for a period of time. .
+                Thrift contributions/cooperative management involves groups of people coming together to contribute an agreed amout of money that would be rotated amongst members of the group for a period of time. .
 We coordinate these programs among interested individuals by getting them together to a unanimous agreement and administration of the collections. </span>
                 </p>
             </div>

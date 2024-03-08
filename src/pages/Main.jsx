@@ -9,7 +9,7 @@ import { useState } from "react";
 import { FaCheckToSlot, FaUsers } from "react-icons/fa6";
 import { ImUserTie } from "react-icons/im";
 import { RiSecurePaymentLine } from "react-icons/ri";
-import { GiTakeMyMoney } from "react-icons/gi";
+import { GiFarmer, GiTakeMyMoney } from "react-icons/gi";
 import { AccordionCustomAnimation } from "../components/Faq";
 
 const Main = () => {
@@ -54,7 +54,7 @@ const Main = () => {
             data-aos="fade-up"
           >
             {" "}
-            Be A Unicorn Agent{" "}
+            Be A Ecosystem Agent{" "}
           </Link>
         </div>
 
@@ -247,7 +247,22 @@ const Main = () => {
                 onClick={() => handleTabClick("loan")}
               >
                 <GiTakeMyMoney />
-                <span className="ml-1">Agent Unicorn Microloan</span>
+                <span className="ml-1">Agent Ecosystem Microloan</span>
+              </a>
+            </li>
+            <li className="z-30 flex-auto md:text-center">
+              <a
+                className={`z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 md:rounded-lg cursor-pointer text-accent bg-inherit ${
+                  activeTab === "farmers" ? "active bg-theme text-light" : ""
+                }`}
+                data-tab-target="farmers"
+                role="tab"
+                aria-selected={activeTab === "farmers"}
+                aria-controls="farmers"
+                onClick={() => handleTabClick("farmers")}
+              >
+                <GiFarmer />
+                <span className="ml-1">Traders/Farmers Registration</span>
               </a>
             </li>
           </ul>
@@ -397,7 +412,7 @@ const Main = () => {
               role="tabpanel"
             >
               <p className="text-lg font-bold text-accent leading-tight">
-                Ecosystem Provide Micro Loan Strictly For Unicorn Agent For
+                Ecosystem Provide Micro Loan Strictly For Ecosystem Agent For
                 Working Capital And This is Done Within:
               </p>
               <div className="m-3">
@@ -418,6 +433,37 @@ const Main = () => {
                 </Link>
               </div>
             </div>
+            <div
+              className={`block text-start ${
+                activeTab === "farmers" ? "" : "hidden"
+              }`}
+              id="farmers"
+              role="tabpanel"
+            >
+              <p className="text-lg font-bold text-accent leading-tight">
+              Ecosystem is the national enumerator for the federal government VAT Direct Initiative (VDI), a project by FIRS/MATAN/Burkefraizer targeting enumeration of 30 million traders in Nigeria.
+              </p>
+              <p className="text-lg font-bold text-dark leading-tight my-3">
+              Ecosystem currently enumerates over 20 million farmers under EGTAI ( a contract farming project between Nigeria and Egyptian companies) and those farmers  under  National Agricultural Commodity Project (NACP)
+              </p>
+              <div className="my-3">
+                {/* <ul className="list-disc text-dark mx-5 text-sm">
+                  <li>Application-disbursement in 24hrs</li>
+                  <li>Monthly Repayment in 24hrs</li>
+                  <li>Competitive rate (Discount for early repayment)</li>
+                  <li>
+                    Amount depends on agent bank account analysis (Up to 5
+                    million)
+                  </li>
+                  <li>No collateral</li>
+                </ul> */}
+
+                <Link to="/" className="font-bold text-accent italic">
+                  {" "}
+                  Learn more...
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -434,7 +480,7 @@ const Main = () => {
         />
         <div className="my-5 text-center py-[100px] bg-light backdrop-blur-sm p-4 md:px-8"  data-aos="fade-left">
           <p className="text-4xl font-bold text-accent my-8"  data-aos="flip-left">
-            Enroll As A Mobile Money Unicorn Agent
+            Enroll As A Mobile Money Ecosystem Agent
             <span className="text-sm block font-normal italic w-[60%] m-auto"  data-aos="zoom-in-up">
               Join the largest viable agent network in Nigeria
             </span>

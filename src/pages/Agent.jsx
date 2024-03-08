@@ -29,7 +29,7 @@ const Agent = () => {
         {/* ecosystem */}
 
         <section className="why-us py-[70px] bg-light" data-aos="fade-up-right">
-          <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
+          {/* <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
             <p
               className="text-2xl md:text-4xl font-bold text-accent px-8 text-center"
               data-aos="fade-left"
@@ -37,7 +37,7 @@ const Agent = () => {
               Ecosystem offer programs and services that educate, orientate and
               expose agents to standard practices for better service delivery
             </p>
-          </div>
+          </div> */}
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-6" data-aos="zoom-in-down">
             <div className="flex flex-col bg-light shadow-lg shadow-gray-300 text-accent hover:bg-theme hover:text-light p-9 rounded-lg" data-aos="zoom-in-left">
@@ -45,8 +45,9 @@ const Agent = () => {
                 <p className="text-2xl  font-bold">
                 Issues Resolution
                 <span className="block text-base text-dark font-normal hover:text-white">
-                We are always there to help in resolution of challenging POS-related issues that any of our agents might experience. We are always ready to give advice and how-to-go-about-it information even if the agent is located far away! .
-                </span>
+                24 hrs support system available.
+
+                 </span>
                 </p>
             </div>
             <div className="flex flex-col bg-light shadow-lg shadow-gray-300 text-accent hover:bg-theme hover:text-light p-9 rounded-lg" data-aos="zoom-in-right">
@@ -87,11 +88,11 @@ We also organize tour to create necessary exposures to working systems across th
  
         <div className="my-5 text-center py-[100px] bg-light backdrop-blur-sm p-4 md:px-8"  data-aos="fade-left">
           <p className="text-4xl font-bold text-accent my-8"  data-aos="flip-left">
-          Be An FCMB Mobile Money Agent
+          Be An Ecosystem Agent
            
           </p>
           <Link
-            to="/agent-registration"
+            to="/be-a-unicorn-agent"
             className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-light rounded-lg"
             data-aos="zoom-in-down"  >
             {" "}

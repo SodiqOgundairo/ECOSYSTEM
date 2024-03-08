@@ -33,7 +33,7 @@ const Unicorn = () => {
             data-aos-duration="1500"
           >
             <p className="leading-none text-[40px] md:text-[60px] text-center font-bold text-light ">
-              Unicorn Agent
+              ECOSYSTEM Agent
             </p>
           </div>
         </div>

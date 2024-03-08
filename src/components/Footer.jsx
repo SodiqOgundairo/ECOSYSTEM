@@ -57,7 +57,7 @@ const Footers = () => {
             <li className="hover:list-none hover:text-theme">Contact </li>
             <li className="hover:list-none hover:text-theme">Locate Us</li>
             <li className="hover:list-none hover:text-theme">
-              Be a Unicorn Agent
+              Be a Ecosystem Agent
             </li>
           </ul>
         </div>
@@ -76,7 +76,7 @@ const Footers = () => {
             <li className="hover:list-none hover:text-theme"> Pay Point </li>
             <li className="hover:list-none hover:text-theme">Locate Us</li>
             <li className="hover:list-none hover:text-theme">
-              Be a Unicorn Agent
+              Be a Ecosystem Agent
             </li>
             <li className="hover:list-none hover:text-theme">
               <Link to="/nin-registration"> NIN Registration</Link>
@@ -96,19 +96,13 @@ const Footers = () => {
           <p className="text-accent font-bold">
             Phone{" "}
             <a
-              href="tel:+2348113953620"
+              href="tel:+2349014825833"
               className="font-normal hover:text-theme"
             >
               {" "}
-              08113953620
+              09014825833
             </a>
-            ,{" "}
-            <a
-              href="tel:+2349062385049"
-              className="font-normal hover:text-theme"
-            >
-              09062385049
-            </a>{" "}
+           
           </p>
           <p className="text-accent font-bold">
             Email{" "}

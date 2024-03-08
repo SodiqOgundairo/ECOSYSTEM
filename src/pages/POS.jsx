@@ -37,6 +37,10 @@ const POS = () => {
           </p>
         </div>
 
+        <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
+          <img src="" alt="" />
+        </div>
+
         <div
           class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-6"
           data-aos="zoom-in-down"
@@ -114,7 +118,7 @@ const POS = () => {
         />
         <div className="my-5 text-center py-[100px]backdrop-blur-sm p-4 md:px-8 "  data-aos="fade-left">
           <p className="text-4xl font-bold my-8"  data-aos="flip-left">
-            Enroll As A Mobile Money Unicorn Agent
+            Enroll As A Mobile Money Ecosystem Agent
             <span className="text-sm block font-normal italic w-[60%] m-auto"  data-aos="zoom-in-up">
               Join the largest viable agent network in Nigeria
             </span>
@@ -124,7 +128,7 @@ const POS = () => {
             </span>
           </p>
           <Link
-            to="/"
+            to="/be-a-unicorn-agent"
             className="px-10 my-3 py-4 bg-gradient-to-r from-accent to-theme hover:from-theme hover:to-accent shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 text-light rounded-lg"
             data-aos="zoom-in-down"  >
             {" "}
