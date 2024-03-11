@@ -2,6 +2,8 @@ import { MdGroups2, MdMonitor, MdSupportAgent } from "react-icons/md";
 import { VscFeedback } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import signUpImage from "../assets/img/signupimage.jpg";
+import posKiosk from "../assets/img/posKiosk.jpg";
+import posMachine from "../assets/img/posMachine.jpg";
 
 
 const POS = () => {
@@ -17,13 +19,18 @@ const POS = () => {
             data-aos-duration="1500"
           >
             <p className="leading-none text-[40px] md:text-[60px] text-center font-bold text-light ">
-              Pay Point
+              POS Distribution
             </p>
           </div>
         </div>
       </section>
 
       {/* ecosystem */}
+
+      <section className="posImage md:grid md:grid-cols-4 place-content-center items-center">
+        <img src={posKiosk} alt="Ecokiosk" data-aos="fade-up-left"/>
+        <img src={posMachine} alt="Ecokiosk" data-aos="fade-up"/>
+      </section>
 
       <section className="why-us py-[70px] bg-light" data-aos="fade-up-right">
         <div className="mx-auto text-center m-3" data-aos="zoom-in-up">
